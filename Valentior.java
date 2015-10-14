@@ -1,5 +1,6 @@
 //AUTHOR T0MW0ZZER
 //14/10/2015
+//14:50
 
 import java.util.Scanner;
 public class Valentior {
