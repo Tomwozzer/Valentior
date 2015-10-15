@@ -1,6 +1,4 @@
 //AUTHOR T0MW0ZZER
-//14/10/2015
-//14:50
 
 import java.util.Scanner;
 public class Valentior {
@@ -78,7 +76,7 @@ public class Valentior {
                 
                 input.nextLine();
                 
-                Hero hero = new Hero(name, health, attack, 0);
+                Hero hero = new Hero(name, classType, health, attack, 0);
 		
 		System.out.println("Greetings " + hero.getName() + " the " + hero.getClass());
 		System.out.println("Your journey starts here, you are currently staying in a tavern in your home town of Rallion");
@@ -203,13 +201,13 @@ public class Valentior {
                 
                 numChoice = input.nextInt();
                 int locationChoice = numChoice;
-                if (numChoice == 1){
+                if (locationChoice == 1){
                     System.out.println("You head for the Capital, Valentior");
                     locationChoice = 1;
-                } else if (numChoice == 2){
+                } else if (locationChoice == 2){
                     System.out.println("You head for the town of Duskdale");
                     locationChoice = 2;
-                } else if (numChoice == 3){
+                } else if (locationChoice == 3){
                     System.out.println("You head to the peacful billage of Ardendale");
                     locationChoice = 3;
                 }
@@ -272,11 +270,45 @@ public class Valentior {
                 }
                 
                 System.out.println("'Thank you for your trade'. The merchant thanks you and leaves. You press on");
+                
+                String currentLocation;
+                
+                if (locationChoice == 1){
+                    System.out.println("You arrive at the gates of Valentior!");
+                    currentLocation = "Valentior";
+                } else if (locationChoice == 2){
+                    System.out.println("You arrive at the plains, outside the town of Duskdale!");
+                    currentLocation = "Duskdale";
+                } else if (locationChoice == 3){
+                    System.out.println("You arrive at the tiny village of Ardendale");
+                    currentLocation = "Ardendale";
+                }
+                
+                
+                
     }
     
     public static void printAttack(){
         System.out.println("1) Attack!   2) Use Item   3) Attempt to Run");
     }
     
+    public static void printCityMenu(){
+        System.out.println("1) Look for merchants");
+        System.out.println("2) Look for a tavern");
+        System.out.println("3) Look for a job");
+        System.out.println("4) Look for a quest");
+        System.out.println("5) Find out information from the inhabitants");
+        System.out.println("6) Explore the city");
+    }
+    
+    public static void printTownMenu(){
+        System.out.println("1) Look for merchants");
+        System.out.println("2) Look for a quest");
+        System.out.println("3) Look for a job");
+        System.out.println("4) Find out information from the inhabitants");
+        System.out.println("5) Explore the town");
+    }
+    
+    public static void printVillageMenu(){}
     
 }

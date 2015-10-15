@@ -5,13 +5,14 @@ public class Hero {
    int health;
    int attack;
    int exp;
+   String classType;
    
-   
-   public Hero(String name, int health, int attack, int exp){
+   public Hero(String name, String classType, int health, int attack, int exp){
        this.name = name;
        this.health = health;
        this.attack = attack;
        this.exp = exp;
+       this.classType = classType;
    }
    
    public String getName(){
